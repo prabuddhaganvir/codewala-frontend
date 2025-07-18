@@ -7,7 +7,7 @@ const useAuthStore = create((set) => ({
 
   fetchUser: async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/me", {
+      const res = await axios.get("https://codewala-frontend.vercel.app", {
         withCredentials: true,
       });
       set({ user: res.data.user, loading: false });
