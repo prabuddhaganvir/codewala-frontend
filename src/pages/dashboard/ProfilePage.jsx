@@ -23,7 +23,7 @@ function ProfilePage() {
 
     useEffect(()=>{
         if (!user || loading) return; 
-         const res =  axios.get(`http://localhost:3000/api/posts/profile/${user._id}`)
+         const res =  axios.get(`https://codewala-backend.vercel.app/posts/profile/${user._id}`)
         .then((res) =>setUserPosts(res.data))
         .catch(err=> console.error("Error in getting post", err))
        
@@ -37,7 +37,7 @@ function ProfilePage() {
     const delPost = async function (id) {
     
     try {
-      const res = await axios.delete(`http://localhost:3000/api/posts/${id}`)
+      const res = await axios.delete(`https://codewala-backend.vercel.app/api/posts/${id}`)
       if(!res.data.success){
           toast.error("Error while deleting post")
           return;

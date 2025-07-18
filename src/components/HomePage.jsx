@@ -11,7 +11,7 @@ function HomePage() {
 
     
   useEffect(() => {
-    const res =  axios.get("http://localhost:3000/api/posts")
+    const res =  axios.get("https://codewala-backend.vercel.app/api/posts")
       .then((res) => setBlogs(res.data.posts))
       .catch((err) => {
         console.error(err);

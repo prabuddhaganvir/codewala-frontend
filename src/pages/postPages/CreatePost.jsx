@@ -37,7 +37,7 @@ function CreatePost() {
      }
 
      try {
-       const res = await axios.post("http://localhost:3000/api/posts",
+       const res = await axios.post("https://codewala-backend.vercel.app/api/posts",
          {title, content}, {withCredentials:true})
 
        if (res.data.success) {
