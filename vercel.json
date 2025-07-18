@@ -1,0 +1,17 @@
+{
+   "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/profile",
+      "dest": "/"
+    },
+    {
+      "src": "/create",
+      "dest": "/"
+    }
+
+  ] 
+}
