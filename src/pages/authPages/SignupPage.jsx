@@ -37,7 +37,7 @@ function SignupPage() {
         }
 
     try {
-            const res = await axios.post("https://codewala-backend.vercel.app/api/signup", 
+            const res = await axios.post("https://blogwala.vercel.app/api/signup", 
             {name, password,role});
         if (res.data.success) {
             toast.success("Signup successful");

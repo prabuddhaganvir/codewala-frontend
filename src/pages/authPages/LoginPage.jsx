@@ -39,7 +39,7 @@ function LoginPage() {
             return;
         }
         try {
-            const res = await axios.post("https://codewala-backend.vercel.app/api/login",
+            const res = await axios.post("https://blogwala.vercel.app/api/login",
                  {name, password}, {withCredentials:true});
             if (res.data.success) {
                 toast.success("Login successful");

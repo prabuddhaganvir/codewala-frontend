@@ -37,7 +37,7 @@ function ProfilePage() {
     const delPost = async function (id) {
     
     try {
-      const res = await axios.delete(`https://codewala-backend.vercel.app/api/posts/${id}`)
+      const res = await axios.delete(`https://blogwala.vercel.app/api/posts/${id}`)
       if(!res.data.success){
           toast.error("Error while deleting post")
           return;
