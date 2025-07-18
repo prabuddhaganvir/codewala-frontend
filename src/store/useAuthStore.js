@@ -7,7 +7,7 @@ const useAuthStore = create((set) => ({
 
   fetchUser: async () => {
     try {
-      const res = await axios.get("https://codewala-frontend.vercel.app", {
+      const res = await axios.get("https://codewala-backend.vercel.app/api/me", {
         withCredentials: true,
       });
       set({ user: res.data.user, loading: false });
@@ -19,7 +19,7 @@ const useAuthStore = create((set) => ({
 
     logout: async () => {
     try {
-      await axios.post("http://localhost:3000/api/logout", {}, { withCredentials: true });
+      await axios.post("https://codewala-backend.vercel.app/api/logout", {}, { withCredentials: true });
       set({ user: null });
     } catch (error) {
       console.error("Logout failed", error);
