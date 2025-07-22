@@ -10,7 +10,7 @@ const AIhelper = () => {
     if (!prompt.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post('https://blogwala.vercel.app/api/gemini', {
+      const res = await axios.post('https://codewala-backend.vercel.app/api/gemini', {
         prompt: prompt,
       });
       setResponse(res.data.response);
