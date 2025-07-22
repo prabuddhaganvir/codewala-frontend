@@ -10,6 +10,7 @@ import ProfilePage from './pages/dashboard/ProfilePage';
 import useAuthStore from './store/useAuthStore';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AIhelper from './components/AIhelper';
 
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
     <Navbar />
+
       <Routes >
         <Route  path="/" element={<HomePage />} />
         <Route  path="/signup" element={<SignupPage />} />
@@ -33,6 +35,7 @@ function App() {
         <Route  path="/create" element={<CreatePost />} />
         <Route  path="/profile" element={<ProfilePage />} />
       </Routes>
+      <AIhelper />
        <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
        <Footer />
 
